@@ -1,0 +1,57 @@
+:root {
+  --bg-color: #131313;
+  --text-color: #fff;
+}
+
+::selection {
+  background: transparent;
+  color: var(--bg-color);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.mouse-trail {
+  position: fixed;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100rem;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: -100rem;
+  left: 100rem;
+  width: 150rem;
+  height: 150rem;
+  border-radius: 50%;
+  background-color: rgb(110, 180, 119);
+  z-index: -1;
+}
+
+h1:before {
+  content: '';
+  position: absolute;
+  bottom: 50rem;
+  right: 100rem;
+  width: 300rem;
+  height: 300rem;
+  border-radius: 50%;
+  background-color: rgb(180, 110, 139);
+  z-index: -1;
+}
